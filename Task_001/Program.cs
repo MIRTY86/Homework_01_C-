@@ -1,7 +1,8 @@
 ﻿
 Console.Write("Как дела?:");
 string user = Console.ReadLine() ?? "";
-if (user.ToLower() == ("хорошо"))
+if (user.ToLower() == "хорошо")
+if (user.ToLower() == "отлично")
 {
     Console.WriteLine("Рад за тебя!!!");
 

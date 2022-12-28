@@ -6,7 +6,7 @@ int F = 0;
 if((N < 100) && (N > -99))
 {
     Console.Write($"{N} - не трехзначное число!");
-  }
+}
 else
 {
     Console.Write($"{N}---->");

@@ -65,9 +65,9 @@ double NumberPowNumber(double A, double B)
         {
             secondpow = secondpow * Math.Abs(A);
             B = B + 1;
-            System.Console.WriteLine();
+            /*System.Console.WriteLine();
             System.Console.WriteLine($"{B} B");
-            System.Console.WriteLine($"{secondpow} значение");
+            System.Console.WriteLine($"{secondpow} значение");*/
         }
         pow = 1 / secondpow;
     }

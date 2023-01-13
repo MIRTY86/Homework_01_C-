@@ -1,4 +1,5 @@
-﻿Console.Write("Введите число: ");
+﻿/*Задача -  вывод третьего числа в трехзначном числе.*/
+Console.Write("Введите число: ");
 string usernum = Console.ReadLine() ?? "";
 int N = int.Parse(usernum);
 int F = 0;

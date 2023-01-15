@@ -44,7 +44,6 @@ double UserNumberEnterB()
 
 }
 
-
 double NumberPowNumber(double A, double B)
 {
     double pow = A;

@@ -1,6 +1,7 @@
 ﻿double a = UserNumberEnterA();
 double b = UserNumberEnterB();
 double Pow = NumberPowNumber(a, b);
+
 Console.Write($"{a}^{b}--->{Pow}");
 
 double UserNumberEnterA()
@@ -60,7 +61,7 @@ double NumberPowNumber(double A, double B)
     {
         double secondpow = 0;
         secondpow = pow;
-        while (B +1 < 0)
+        while (B + 1 < 0)
         {
             secondpow = secondpow * Math.Abs(A);
             B = B + 1;

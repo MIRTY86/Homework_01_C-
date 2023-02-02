@@ -1,53 +1,41 @@
 ﻿/* Небольшая программка проверки равенства трех чисел через Bool переменную, с проверкой 
 корректности ввода данных. */
-int a;
-int b;
-int c;
-
-while (true)
+int a = 0;
+int b = 1;
+int c = 2;
+a = CheckNumber(a);
+b = CheckNumber(b);
+c = CheckNumber(c);
+NumberComparison();
+string Message(int num)
 {
-    try
-    {
-        System.Console.WriteLine("Введите число a:");
-        a = int.Parse(Console.ReadLine() ?? "");
-        break;
-
-    }
-    catch (Exception exc)
-    {
-        System.Console.WriteLine($"Ошибка ввода данных!!! {exc.Message}");
-    }
+    string message = "ошибка";
+    if (num == a) message = "Ввидите число а : ";
+    if (num == b) message = "Ввидите число b : ";
+    if (num == c) message = "Ввидите число c : ";
+    return message;
 }
-while (true)
+int CheckNumber(int num)
 {
-    try
+    while (true)
     {
-        System.Console.WriteLine("Введите число b:");
-        b = int.Parse(Console.ReadLine() ?? "");
-        break;
-
+        try
+        {
+            System.Console.WriteLine(Message(num));
+            num = int.Parse(Console.ReadLine() ?? "");
+            break;
+        }
+        catch (Exception exc)
+        {
+            Console.WriteLine($"Ошибка ввода данных!!! {exc.Message}");
+        }
     }
-    catch (Exception exc)
-    {
-        System.Console.WriteLine($"Ошибка ввода данных!!! {exc.Message}");
-    }
+    return num;
 }
-while (true)
+void NumberComparison()
 {
-    try
-    {
-        System.Console.WriteLine("Введите число c:");
-        c = int.Parse(Console.ReadLine() ?? "");
-        break;
-
-    }
-    catch (Exception exc)
-    {
-        System.Console.WriteLine($"Ошибка ввода данных!!! {exc.Message}");
-    }
+    bool res = a == b && b == c;
+    if (res) System.Console.WriteLine($"Числа {a} , {b}  и {c} равны.");
+    else System.Console.WriteLine($"Числа {a} , {b}  и {c} не равны.");
+    System.Console.WriteLine("Условие -" + res);
 }
-bool num = a == b && b == c; //&& a > b;
-//System.Console.WriteLine(a == b);
-if (num) System.Console.WriteLine($"Числа {a} , {b}  и {c} равны.");
-else System.Console.WriteLine($"Числа {a} , {b}  и {c} не равны.");
-System.Console.WriteLine("Условие -" + num);
